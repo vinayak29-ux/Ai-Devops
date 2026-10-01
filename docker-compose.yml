@@ -1,0 +1,14 @@
+services:
+  shipwise-ai:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - shipwise-data:/data
+    environment:
+      SHIPWISE_DATABASE_URL: sqlite+aiosqlite:////data/shipwise.db
+
+volumes:
+  shipwise-data:

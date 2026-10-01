@@ -1,0 +1,1 @@
+"""ShipWise AI application package."""
